@@ -14,7 +14,7 @@ resource "aws_network_interface" "ni-df" {
 
 resource "aws_instance" "ec2-df" {
   ami           = var.ec2_ami
-  instance_type = var.ec2_types["us-east-1"]
+  instance_type = var.ec2_types
 
   network_interface {
     network_interface_id = aws_network_interface.ni-df.id
